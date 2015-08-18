@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="eu.janmuller.android.simplecropimage"
+          android:versionCode="1"
+          android:versionName="1.0">
+          
+   <activity
+        android:name="com.cute.dogs.wallpaper.MainActivity">
+              
+       <intent-filter >
+        <action   android:name ="android.intent.action.VIEW" />
+        <action   android:name ="com.cute.dogs.wallpaper.MainActivity" />       
+        <category android:name ="android.intent.category.DEFAULT" />
+      </intent-filter>
+        
+    </activity>
+    
+    <activity
+        android:name="com.best.dogs.wallpaper.MainActivity">
+              
+       <intent-filter >
+        <action   android:name ="android.intent.action.VIEW" />
+        <action   android:name ="com.best.dogs.wallpaper.MainActivity" />       
+        <category android:name ="android.intent.category.DEFAULT" />
+      </intent-filter>
+        
+    </activity>
+  
+    
+   
+    
+ 
+
+</manifest>

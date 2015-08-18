@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:gesture-image="http://schemas.polites.com/android"
+    android:id="@+id/scrollview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+<LinearLayout 
+    android:id="@+id/mylayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/Button_crop"
+            style="@style/RoboTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:text="@string/crop"
+            android:textColor="#33B5E5"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/Button_rotate_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rotate_left" />
+
+        <ImageButton
+            android:id="@+id/Button_rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rotate_right" />
+        
+         <Button
+            android:id="@+id/Button_setother"
+            style="@style/RoboTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:text="@string/setother"
+            android:textColor="#33B5E5"
+            android:textSize="12sp" />
+
+        
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:id="@+id/checkboxlayout">
+
+         <CheckBox
+             android:id="@+id/scrollable"
+             style="@style/RoboTheme"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="#33B5E5"
+             android:textSize="12sp"
+             android:checked="false"
+             android:text="Scrollable" />
+         
+        
+         
+         <Button
+            android:id="@+id/Button_setwallpaper"
+            style="@style/RoboTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:text="@string/setwallpaper"
+            android:textColor="#33B5E5"
+            android:textSize="12sp" />
+        
+     </LinearLayout>
+        
+         <com.edmodo.cropper.CropImageView
+             xmlns:custom="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/CropImageView"
+             android:layout_width="wrap_content"
+        	 android:layout_height="0dp"
+       		 android:layout_weight="1"
+             android:layout_gravity="center"
+             
+             android:adjustViewBounds="true" />
+
+    <com.polites.android.GestureImageView
+        android:id="@+id/croppedImageView"
+        
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+       	android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/croppedImageDesc"
+        gesture-image:max-scale="10.0"
+        gesture-image:min-scale="0.1"
+        gesture-image:strict="false" />
+    
+     
+ 
+
+    
+
+</LinearLayout>
+
+</ScrollView>
