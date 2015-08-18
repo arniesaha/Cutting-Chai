@@ -2,7 +2,6 @@ package com.cuttingchai.assignment;
 
 
 import java.io.File;
-import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -13,7 +12,6 @@ import java.util.TreeSet;
 
 import android.app.ProgressDialog;
 import android.database.Cursor;
-import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -236,8 +234,7 @@ public class MainActivity extends BaseActivity implements ActionBar.TabListener{
 						SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd", Locale.UK);  
 						String formattedDateString = formatter.format(lastModDate);
 						try {
-							Date dbDate = formatter.parse(formattedDateString);
-							
+							Date dbDate = formatter.parse(formattedDateString);							
 							datasource.createComment(Uri.fromFile(file).toString(),dbDate.getTime());
 							System.out.println("DB Date: "+dbDate.getTime());
 						} catch (ParseException e1) {
